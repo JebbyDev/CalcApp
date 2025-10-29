@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css" type="text/css">
+</head>
+<body>
+        <div class="overallWrapper">
+          <div class="calculatorWrapper">
+               <h1>Calculator App</h1>
+               <input type="text" id="displayNum" disable>
+        
+
+                <div class="box1">
+                    <button onclick="btnValue(1)">1</button>
+                    <button onclick="btnValue(2)">2</button>
+                    <button onclick="btnValue(3)">3</button>
+                    <button onclick="btnValue('*')">*</button>
+
+                </div>
+
+                <div class="box2">
+                    <button onclick="btnValue(4)">4</button>
+                    <button onclick="btnValue(5)">5</button>
+                    <button onclick="btnValue(6)">6</button>
+                    <button onclick="btnValue('/')">/</button>
+    
+                </div>
+
+                <div class="box3">
+                    <button onclick="btnValue(7)">7</button>
+                    <button onclick="btnValue(8)">8</button>
+                    <button onclick="btnValue(9)">9</button>
+                    <button onclick="btnValue('-')">-</button>
+    
+                </div>
+
+                <div class="box4">
+                    <button onclick="btnValue(0)">0</button>
+                    <button onclick="clearBtn()">c</button>
+                    <button onclick="resultBtn()">=</button>
+                    <button onclick="btnValue('+')">+</button>
+    
+                </div>
+
+            </div>
+
+        </div>
+
+           <script>
+            let displayNum = document.getElementById('displayNum');
+
+            function btnValue(value){
+                displayNum.value += value;
+            }
+
+            function resultBtn(){
+                displayNum.value = eval(displayNum.value);
+            }
+
+            function clearBtn(){
+                displayNum.value = '';
+            }
+
+        </script>
+</body>
+</html>
